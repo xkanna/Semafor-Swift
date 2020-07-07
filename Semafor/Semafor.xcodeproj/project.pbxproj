@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824FFE4A24B31C2900910DB7 /* Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FFE4924B31C2900910DB7 /* Intervals.swift */; };
+		8250AED424B472F5000E69D6 /* SemaforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250AED324B472F5000E69D6 /* SemaforTableViewCell.swift */; };
+		8250AED624B47315000E69D6 /* SemaforTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250AED524B47315000E69D6 /* SemaforTableViewController.swift */; };
 		82A8473524AF36630002AED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473424AF36630002AED8 /* AppDelegate.swift */; };
 		82A8473724AF36630002AED8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473624AF36630002AED8 /* SceneDelegate.swift */; };
 		82A8473924AF36630002AED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473824AF36630002AED8 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		824FFE4924B31C2900910DB7 /* Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervals.swift; sourceTree = "<group>"; };
+		8250AED324B472F5000E69D6 /* SemaforTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforTableViewCell.swift; sourceTree = "<group>"; };
+		8250AED524B47315000E69D6 /* SemaforTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforTableViewController.swift; sourceTree = "<group>"; };
 		82A8473124AF36630002AED8 /* Semafor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Semafor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8473424AF36630002AED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82A8473624AF36630002AED8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				82A8475524AF44440002AED8 /* SemaforView.swift */,
+				8250AED324B472F5000E69D6 /* SemaforTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				82A8473824AF36630002AED8 /* ViewController.swift */,
+				8250AED524B47315000E69D6 /* SemaforTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 		82A8474A24AF36C00002AED8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				824FFE4924B31C2900910DB7 /* Intervals.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,10 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8250AED424B472F5000E69D6 /* SemaforTableViewCell.swift in Sources */,
 				82A8475624AF44440002AED8 /* SemaforView.swift in Sources */,
 				82A8473924AF36630002AED8 /* ViewController.swift in Sources */,
 				82A8473524AF36630002AED8 /* AppDelegate.swift in Sources */,
+				824FFE4A24B31C2900910DB7 /* Intervals.swift in Sources */,
 				82A8473724AF36630002AED8 /* SceneDelegate.swift in Sources */,
+				8250AED624B47315000E69D6 /* SemaforTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

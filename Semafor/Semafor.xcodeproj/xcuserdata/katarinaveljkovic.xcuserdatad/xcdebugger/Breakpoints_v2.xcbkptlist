@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C44B04F3-9099-4C9B-96E9-51C6DA3015DC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF4E9BB1-BBA6-4AC0-BC89-FDE26408D321"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Semafor/Views/SemaforView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AF4E9BB1-BBA6-4AC0-BC89-FDE26408D321 - 64c711c25438bfd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Semafor.SemaforView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Semafor.SemaforView&gt;"
+                  moduleName = "Semafor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katarinaveljkovic/Documents/projects/Semafor/Semafor/Views/SemaforView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "AF4E9BB1-BBA6-4AC0-BC89-FDE26408D321 - d76624f93fede479"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Semafor.SemaforView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Semafor.SemaforView&gt;"
+                  moduleName = "Semafor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katarinaveljkovic/Documents/projects/Semafor/Semafor/Views/SemaforView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "230">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D56578C8-2CA1-416A-AD85-12FEA8F750A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Semafor/ViewControllers/SemaforTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "backButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
