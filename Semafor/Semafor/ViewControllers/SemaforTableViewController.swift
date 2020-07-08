@@ -19,11 +19,6 @@ class SemaforTableViewController: UITableViewController {
     weak var thirdTextField: UITextField!
     weak var fourthTextField: UITextField!
     weak var fifthTextField: UITextField!
-    var first = Float()
-    var second = Float()
-    var third = Float()
-    var fourth = Float()
-    var fifth = Float()
     var interval = Intervals()
     var model: Intervals!
     
@@ -97,7 +92,7 @@ class SemaforTableViewController: UITableViewController {
         interval.firstInterval = Float(firstTextField.text!) ?? 0
         interval.secondInterval = Float(secondTextField.text!) ?? 0
         interval.thirdInterval = Float(thirdTextField.text!) ?? 0
-        interval.fourthInterval = Float(fourthTextField.text!) ?? 0
+        interval.secondInterval = Float(fourthTextField.text!) ?? 0
         interval.fifthInterval = Float(fifthTextField.text!) ?? 0
         
         

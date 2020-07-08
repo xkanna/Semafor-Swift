@@ -17,13 +17,6 @@ class ViewController: UIViewController {
     let table = SemaforTableViewController()
     var interval = Intervals(firstInterval: 2, secondInterval: 2, thirdInterval: 2, fourthInterval: 2, fifthInterval: 2)
     
-    
-    typealias DoneCallback = ((Intervals) -> Void)
-    private var callback: DoneCallback?
-    func finished(callback: DoneCallback?) {
-        self.callback = callback
-    }
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -54,150 +47,149 @@ class ViewController: UIViewController {
         fourthSemafor.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         fourthSemafor.setTransformRotation(toDegrees: 90)
         
-        var red = Bool()
-        var green = Bool()
-        var red2 = Bool()
-        var green2 = Bool()
+        var red = false
+        var green = false
+        var red1 = false
+        var green1 = false
         
-        func start(){
+        func start() {
             stage1()
-            stage33()
+            stage52()
         }
+        
         func stage1(){
-            //let timer1 = interval?.firstInterval
             
-            Timer.scheduledTimer(withTimeInterval: Double(interval.fifthInterval), repeats: false){ timer in
-                self.firstSemafor.state5()
-                self.secondSemafor.state5()
+            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false) { [weak self] timer in
+                self?.firstSemafor.state5()
+                self?.secondSemafor.state5()
                 green = true
-                stage12()
+                stage2()
             }
             
         }
-        func stage12(){
-            Timer.scheduledTimer(withTimeInterval: Double(interval.fourthInterval), repeats: false){ timer in
+        func stage2(){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.firstInterval), repeats: false){ timer in
                 self.firstSemafor.state4()
                 self.secondSemafor.state4()
                 green = true
-                stage2()
-                
-            }
-        }
-        func stage2(){
-            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false){timer in
-                if(green){
-                    self.firstSemafor.state3()
-                    self.secondSemafor.state3()
-                    green = false
-                    stage3()
-                    
-                }
-                if(red){
-                    self.firstSemafor.state2()
-                    self.secondSemafor.state2()
-                    red = false
-                    stage1()
-                    
-                }
+                stage3()
                 
             }
         }
         func stage3(){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.secondInterval), repeats: false){timer in
+                if(green){
+                    self.firstSemafor.state3()
+                    self.secondSemafor.state3()
+                    green = false
+                    stage5()
+                }
+                
+                if(red){
+                    self.firstSemafor.state3()
+                    self.secondSemafor.state3()
+                    red = false
+                    stage1()
+                }
+            }
+        }
+        func stage4(){
             Timer.scheduledTimer(withTimeInterval: Double(interval.firstInterval), repeats: false){timer in
+                self.firstSemafor.state2()
+                self.secondSemafor.state2()
+                red = true
+                stage3()
+                
+                
+            }
+        }
+        func stage5(){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false){timer in
                 self.firstSemafor.state1()
                 self.secondSemafor.state1()
                 red = true
-                stage2()
+                stage4()
                 
                 
             }
         }
-        func stage11(){
-            Timer.scheduledTimer(withTimeInterval: Double(interval.fifthInterval), repeats: false){ timer in
+        func stage12(){
+            
+            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false){ timer in
                 self.thirdSemafor.state5()
                 self.fourthSemafor.state5()
-                green2 = true
-                stage21()
-                
-            }
-        }
-        func stage21(){
-            Timer.scheduledTimer(withTimeInterval: Double(interval.fourthInterval), repeats: false){ timer in
-                self.thirdSemafor.state4()
-                self.fourthSemafor.state4()
-                green2 = true
+                green1 = true
                 stage22()
-                
             }
+            
         }
         func stage22(){
-            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false){timer in
-                if(green2){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.firstInterval), repeats: false){ timer in
+                self.thirdSemafor.state4()
+                self.fourthSemafor.state4()
+                green1 = true
+                stage32()
+                
+            }
+        }
+        func stage32(){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.secondInterval), repeats: false){timer in
+                if green1 {
                     self.thirdSemafor.state3()
                     self.fourthSemafor.state3()
-                    green2 = false
-                    stage33()
+                    green1 = false
+                    stage52()
                     
                 }
-                if(red2){
-                    self.thirdSemafor.state2()
-                    self.fourthSemafor.state2()
-                    red2 = false
-                    stage11()
+                if red1 {
+                    self.thirdSemafor.state3()
+                    self.fourthSemafor.state3()
+                    red1 = false
+                    stage12()
                     
                 }
                 
             }
         }
-        func stage33(){
+        
+        func stage42(){
             Timer.scheduledTimer(withTimeInterval: Double(interval.firstInterval), repeats: false){timer in
+                self.thirdSemafor.state2()
+                self.fourthSemafor.state2()
+                red1 = true
+                stage32()
+                
+                
+            }
+        }
+        
+        func stage52(){
+            Timer.scheduledTimer(withTimeInterval: Double(interval.thirdInterval), repeats: false){timer in
                 self.thirdSemafor.state1()
                 self.fourthSemafor.state1()
-                red2 = true
-                stage22()
+                red1 = true
+                stage42()
                 
                 
             }
         }
+        
         start()
     }
+    
     @objc func editButtonTapped() {
         let vc = SemaforTableViewController()
-        //   vc.model = Intervals
-        //    vc.finished { [weak self] (model) in
-        //self?.interval = interval
         
         vc.delegate = self
         vc.interval = interval
         let nc = UINavigationController(rootViewController: vc)
         present(nc, animated: true)
     }
-    
-    
 }
+
+// MARK: - SemaforTableViewControllerDelegate
 extension ViewController: SemaforTableViewControllerDelegate {
     func done(interval: Intervals) {
         self.interval = interval
     }
 }
-
-extension UIView {
-    func setTransformRotation(toDegrees angleInDegrees: CGFloat) {
-        let angleInRadians = angleInDegrees / 180.0 * CGFloat.pi
-        let rotation = self.transform.rotated(by: angleInRadians)
-        self.transform = rotation
-    }
-}
-func startBlink(view: UIView) {
-    UIView.animate(withDuration: 0.5,
-                   delay:0.0,
-                   options:[.allowUserInteraction, .curveEaseInOut, .autoreverse, .repeat],
-                   animations: { view.alpha = 0.4 },
-                   completion: nil)
-}
-func stopBlink(view: UIView) {
-    view.layer.removeAllAnimations()
-    view.alpha = 1
-}
-
-

@@ -9,9 +9,9 @@
 import Foundation
 
 struct Intervals{
-    var firstInterval : Float = 3
-    var secondInterval : Float = 3
-    var thirdInterval : Float = 3
-    var fourthInterval : Float = 3
-    var fifthInterval : Float = 3
+    var firstInterval : Float = 2
+    var secondInterval : Float = 2
+    var thirdInterval : Float = 2
+    var fourthInterval : Float = 2
+    var fifthInterval : Float = 2
 }

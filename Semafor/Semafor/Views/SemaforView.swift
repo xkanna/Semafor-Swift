@@ -10,19 +10,10 @@ import UIKit
 
 class SemaforView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     var redView = UIView()
     var yellowView = UIView()
     var greenView = UIView()
     var grayView = UIView()
-    
-    
     
     private var isHorizontal = false
     
@@ -92,12 +83,14 @@ class SemaforView: UIView {
         redView.backgroundColor = .red
         yellowView.backgroundColor = .gray
         greenView.backgroundColor = .gray
+        redView.stopBlink()
     }
     
     func state2() {
         redView.backgroundColor = .red
         yellowView.backgroundColor = .yellow
         greenView.backgroundColor = .gray
+        redView.startBlink()
     }
     
     func state3(){
@@ -110,12 +103,11 @@ class SemaforView: UIView {
         redView.backgroundColor = .gray
         yellowView.backgroundColor = .gray
         greenView.backgroundColor = .green
-        
-        startBlink(view: greenView)
+        greenView.startBlink()
     }
     
-    func state5(){
-        stopBlink(view: greenView)
+    func state5() {
+        greenView.stopBlink()
         redView.backgroundColor = .gray
         yellowView.backgroundColor = .gray
         greenView.backgroundColor = .green

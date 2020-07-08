@@ -10,6 +10,7 @@
 		824FFE4A24B31C2900910DB7 /* Intervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824FFE4924B31C2900910DB7 /* Intervals.swift */; };
 		8250AED424B472F5000E69D6 /* SemaforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250AED324B472F5000E69D6 /* SemaforTableViewCell.swift */; };
 		8250AED624B47315000E69D6 /* SemaforTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8250AED524B47315000E69D6 /* SemaforTableViewController.swift */; };
+		8259FA0B24B5E21100371AEE /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259FA0A24B5E21100371AEE /* UIView+Additions.swift */; };
 		82A8473524AF36630002AED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473424AF36630002AED8 /* AppDelegate.swift */; };
 		82A8473724AF36630002AED8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473624AF36630002AED8 /* SceneDelegate.swift */; };
 		82A8473924AF36630002AED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8473824AF36630002AED8 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		824FFE4924B31C2900910DB7 /* Intervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intervals.swift; sourceTree = "<group>"; };
 		8250AED324B472F5000E69D6 /* SemaforTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforTableViewCell.swift; sourceTree = "<group>"; };
 		8250AED524B47315000E69D6 /* SemaforTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforTableViewController.swift; sourceTree = "<group>"; };
+		8259FA0A24B5E21100371AEE /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		82A8473124AF36630002AED8 /* Semafor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Semafor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8473424AF36630002AED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82A8473624AF36630002AED8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8259FA0924B5E1FA00371AEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8259FA0A24B5E21100371AEE /* UIView+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		82A8472824AF36630002AED8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		82A8473324AF36630002AED8 /* Semafor */ = {
 			isa = PBXGroup;
 			children = (
+				8259FA0924B5E1FA00371AEE /* Extensions */,
 				82A8474A24AF36C00002AED8 /* Models */,
 				82A8474924AF36B70002AED8 /* ViewControllers */,
 				82A8474824AF36AF0002AED8 /* Views */,
@@ -178,6 +189,7 @@
 				82A8475624AF44440002AED8 /* SemaforView.swift in Sources */,
 				82A8473924AF36630002AED8 /* ViewController.swift in Sources */,
 				82A8473524AF36630002AED8 /* AppDelegate.swift in Sources */,
+				8259FA0B24B5E21100371AEE /* UIView+Additions.swift in Sources */,
 				824FFE4A24B31C2900910DB7 /* Intervals.swift in Sources */,
 				82A8473724AF36630002AED8 /* SceneDelegate.swift in Sources */,
 				8250AED624B47315000E69D6 /* SemaforTableViewController.swift in Sources */,
